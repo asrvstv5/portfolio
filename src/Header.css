@@ -1,0 +1,9 @@
+.Header {
+    border-color: red;
+    border-style: solid;
+}
+
+.Columns {
+    border-color: black;
+    border-style: dotted;
+}

@@ -28,6 +28,11 @@
   color: #61dafb;
 }
 
+.Home {
+  height: 97vh;
+  overflow: auto;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
