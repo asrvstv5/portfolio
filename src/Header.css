@@ -5,5 +5,21 @@
 
 .Columns {
     border-color: black;
+    overflow: auto;
     border-style: dotted;
 }
+
+.lineBreak {
+    width: 100%;
+}
+
+.vertical-center {
+    position: relative;
+  }
+
+  .element-centered {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }

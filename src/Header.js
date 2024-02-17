@@ -5,11 +5,11 @@ import './Header.css';
 
 function Header() {
   return (
-    <Container className="Header" fluid>
+    <Container className="Headera" fluid>
       <Row>
-        <Col className="Columns" style={{display:'flex', justifyContent:'left'}}>Amitesh Srivastava Logo</Col>
-        <Col className="Columns" style={{display:'flex', justifyContent:'right'}}>
-            <Col className="Columns">Home</Col>
+        <Col className="Columnsa" style={{display:'flex', justifyContent:'left'}}>Amitesh Srivastava Logo</Col>
+        <Col className="Columnsa" style={{display:'flex', justifyContent:'right'}}>
+            <Col className="Columnsa">Home</Col>
             <Col>About</Col>
             <Col>Projects</Col>
             <Col>Socials</Col>
