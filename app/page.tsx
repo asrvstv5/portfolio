@@ -1,10 +1,12 @@
-import { ArrowRight, BookOpen, Cloud, Code2, Github, GraduationCap, Linkedin, Mail, Network, Sparkles, Workflow, Wrench } from 'lucide-react';
+import { ArrowRight, BookOpen, CalendarDays, Cloud, Code2, ExternalLink, Github, GraduationCap, Linkedin, Mail, MapPin, Network, Sparkles, Workflow, Wrench } from 'lucide-react';
 
 const linkedin = 'https://www.linkedin.com/in/amitesh-srivastava-b5b740105/';
 const github = 'https://github.com/asrvstv5';
 const dietmate = 'https://apps.apple.com/us/app/dietmate-app/id6503179053';
 const medium1 = 'https://medium.com/@amitesh.s.sr/planning-an-app-a-detailed-guide-a366b180e220';
 const medium2 = 'https://medium.com/@amitesh.s.sr/langchain-simplified-ad0c4b4d63e3';
+const ideWorkshop = 'https://ide-workshop.github.io/';
+const ideCommittee = 'https://conf.researchr.org/committee/icse-2027/ide-2027-papers-program-committee';
 
 const interests = [
   ['AI for Software Engineering', Sparkles], ['LLM / Agentic Software Engineering', Network], ['Developer Productivity & Tooling', Wrench],
@@ -25,7 +27,44 @@ export default function Home() {
     <section id="home" className="hero"><div className="hero-copy"><h1>Amitesh Srivastava</h1><p className="role">Software Engineer&nbsp; @ &nbsp;Meta&nbsp; | &nbsp;Formerly Microsoft<br/>UIUC Computer Engineering Alumni</p><p className="lead">I build large-scale software systems at the intersection of AI, software engineering, and developer productivity. I’m passionate about applying cutting-edge technology to solve real-world problems and contributing to the broader research and engineering community.</p><div className="actions"><a className="button primary" href="#contact">Get in touch <ArrowRight size={15}/></a><a className="button secondary" href="/resume">View my resume <ArrowRight size={15}/></a></div><div className="identity-links"><a href={linkedin}><Linkedin size={15}/> LinkedIn</a><a href={github}><Github size={15}/> GitHub</a><span><GraduationCap size={15}/> Google Scholar</span><span><span className="orcid">iD</span> ORCID</span></div></div><div className="hero-art"><img src="/uiuc-quad.jpg" alt="University of Illinois Urbana-Champaign Quad at sunset" /></div></section>
     <section id="about" className="section about"><div><div className="section-label">01 · ABOUT</div><h2>About Me</h2><p>I’m a software engineer with 7+ years of experience at Meta and Microsoft, building and scaling products used by millions of people worldwide. My work spans backend infrastructure, distributed systems, AI-powered products, and developer tooling.</p><p>I’m also deeply interested in research at the intersection of AI and software engineering, and I’m actively looking for opportunities to contribute as a peer reviewer for journals, workshops, and conferences in this space.</p><a className="text-link" href="#contact">Learn more about my background <ArrowRight size={14}/></a></div><div className="interest-card"><h3>Research Interests</h3>{interests.map(([label, Icon]) => <div className="interest" key={label as string}><Icon size={17}/><span>{label as string}</span></div>)}</div></section>
     <section id="experience" className="section"><div className="section-heading"><div><div className="section-label">02 · EXPERIENCE</div><h2>Professional Experience</h2></div><a className="text-link" href="#experience">View full experience <ArrowRight size={14}/></a></div><div className="timeline"><article className="job"><div className="company-mark meta">∞</div><div className="job-main"><h3>Meta</h3><strong>Software Engineer</strong><p>Led development across Horizon and Meta’s Family of Apps, including playable advertising experiences, AI-powered game creation, Avatar Editor Marketplace, recommendation systems, and cloud-streamed game infrastructure.</p></div><div className="job-meta">May 2025 – Present<br/><span>New York, NY</span></div></article><article className="job"><div className="company-mark ms"><i></i><i></i><i></i><i></i></div><div className="job-main"><h3>Microsoft</h3><strong>Software Engineer II</strong><p>Built full-stack Power Platform and Copilot plugin infrastructure, cybersecurity tooling, GraphQL services, deployment pipelines, and network engineering systems.</p></div><div className="job-meta">May 2019 – Feb 2025<br/><span>Seattle, WA</span></div></article></div></section>
-    <section id="research" className="section research"><div className="section-label">03 · RESEARCH</div><h2>Research</h2><div className="research-placeholder"><Sparkles size={20}/><div><h3>Research & Publications</h3><p>Peer-reviewed publications and formal research contributions are coming soon. Current interests include AI for software engineering, agentic systems, developer productivity, reliability, and human-AI collaboration.</p></div><span>Coming soon</span></div></section>
+    <section id="research" className="section research">
+      <div className="section-label">03 · RESEARCH</div>
+      <h2>Research</h2>
+      <div className="research-intro">I’m interested in the intersection of AI, software engineering, developer tools, and building systems that improve developer productivity.</div>
+
+      <article className="committee-card">
+        <div className="committee-identity">
+          <div className="committee-mark">
+            <span>ICSE</span>
+            <strong>2027</strong>
+            <small>DUBLIN · IRELAND</small>
+          </div>
+        </div>
+        <div className="committee-main">
+          <div className="committee-badge">PROGRAM COMMITTEE MEMBER</div>
+          <h3>IDE 2027</h3>
+          <p className="committee-title">4th International Workshop on Integrated Development Environments</p>
+          <p className="committee-meta-line">Co-located with ICSE 2027 · Dublin, Ireland · May 1, 2027</p>
+          <p className="committee-description">I am serving as a <strong>Program Committee member</strong> for IDE 2027, contributing to the peer-review process for research on integrated development environments and developer productivity.</p>
+        </div>
+        <div className="committee-details">
+          <span className="committee-year">2027</span>
+          <div className="committee-detail"><CalendarDays size={17}/><div><strong>May 1, 2027</strong><small>Workshop date</small></div></div>
+          <div className="committee-detail"><MapPin size={17}/><div><strong>Dublin, Ireland</strong><small>Convention Centre Dublin</small></div></div>
+          <div className="committee-detail"><Sparkles size={17}/><div><strong>ICSE 2027</strong><small>49th International Conference on Software Engineering</small></div></div>
+          <div className="committee-actions">
+            <a className="button primary" href={ideWorkshop}>Visit IDE 2027 <ExternalLink size={13}/></a>
+            <a className="button secondary committee-secondary" href={ideCommittee}>View Committee <ExternalLink size={13}/></a>
+          </div>
+        </div>
+      </article>
+
+      <div className="research-placeholder">
+        <Sparkles size={20}/>
+        <div><h3>Research & Publications</h3><p>Peer-reviewed publications and formal research contributions are coming soon. Current interests include AI for software engineering, agentic systems, developer productivity, reliability, and human-AI collaboration.</p></div>
+        <span>Coming soon</span>
+      </div>
+    </section>
     <section id="projects" className="section"><div className="section-heading"><div><div className="section-label">04 · PROJECTS</div><h2>Featured Work</h2></div><a className="text-link" href="#projects">View all projects <ArrowRight size={14}/></a></div><div className="project-grid">{projects.map((p, i) => <article className="project" key={p.title}><div className={`project-visual v${i}`}><Code2 size={24}/><span>{String(i+1).padStart(2,'0')}</span></div><div className="project-body"><div className="eyebrow">{p.eyebrow}</div><h3>{p.title}</h3><p>{p.text}</p><div className="tags">{p.tags.map(t => <span key={t}>{t}</span>)}</div>{p.title === 'Dietmate' && <a href={dietmate} className="text-link">View on App Store <ArrowRight size={13}/></a>}</div></article>)}</div></section>
     <section id="writing" className="section"><div className="section-heading"><div><div className="section-label">05 · WRITING</div><h2>Writing & Talks</h2></div><a className="text-link" href={medium1}>View all writing <ArrowRight size={14}/></a></div><div className="writing-grid"><a className="writing" href={medium1}><BookOpen size={18}/><div><h3>Planning an App: A Detailed Guide</h3><p>Thoughts on taking an app idea from planning through implementation.</p></div><ArrowRight size={16}/></a><a className="writing" href={medium2}><BookOpen size={18}/><div><h3>LangChain Simplified</h3><p>An accessible exploration of LangChain and building LLM-powered applications.</p></div><ArrowRight size={16}/></a></div></section>
     <section id="contact" className="contact"><div><div className="section-label">06 · CONTACT</div><h2>Interested in collaborating?</h2><p>I’m always open to connecting with researchers, engineers, and builders working on exciting problems at the intersection of AI and software engineering.</p></div><a className="button primary" href="mailto:amitesh.s.sr@gmail.com">Get in touch <ArrowRight size={15}/></a></section>
